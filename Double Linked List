@@ -1,0 +1,11 @@
+struct Node{
+    int data;
+    struct Node *prev,*next;
+};
+
+void traverse(struct Node *head){
+    while(head){
+        printf("%d ", head->data);
+        head=head->next;
+    }
+}
