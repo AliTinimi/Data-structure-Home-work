@@ -1,0 +1,19 @@
+ //DFS
+void dfs(int v){
+    visited[v]=1;
+    for(int i=0;i<n;i++)
+        if(graph[v][i] && !visited[i])
+            dfs(i);
+}
+
+// BFS
+queue[++rear]=start;
+visited[start]=1;
+while(front<=rear){
+    int v=queue[front++];
+    for(int i=0;i<n;i++)
+        if(graph[v][i] && !visited[i]){
+            visited[i]=1;
+            queue[++rear]=i;
+        }
+}
